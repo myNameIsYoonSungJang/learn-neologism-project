@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Jua&display=swap" rel="stylesheet">
+    <style>
+        .menubar {
+            display: flex;
+            font-size: 20px;
+            background-color: #f9a778;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 25px;
+        }
+
+        #menuDiv {
+            width: 550px;
+            display: flex;
+            font-size: 15px;
+            justify-content: space-evenly;
+        }
+
+        #homepage {
+            color: black;
+            text-decoration: none;
+        }
+
+        #menuDiv a {
+            color: black;
+            text-decoration: none;
+        }
+
+        #menuDiv a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .inner {
+            background: url("https://cdn.univ20.com/wp-content/uploads/2019/03/8f99cfafb96e1ef958f53cee53b3f5eb.png");
+            background-repeat: no-repeat;
+            background-size: 100% 700px;
+            width: 100%;
+            height: 700px;
+            position: relative;
+        }
+
+        .inner::before {
+            content: "";
+            opacity: 0.4;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background-color: #33332E;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Jua&display=swap');
+
+        .main-banner-text {
+            font-family: 'Black Han Sans', sans-serif;
+            text-align: center;
+            text-shadow: -5px 0px black, 0px 5px black, 5px 0px black, 0px -5px black;
+            font-size: 150px;
+            letter-spacing: 15px;
+            color: #F5CE96;
+            position: relative;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav -->
+    <nav class="menubar">
+        <div><a href="/" id="homepage">home</a></div>
+        <div id="menuDiv">
+            <div><a href="/introduce">페이지 소개</a></div>
+            <div><a href="/survey">신조어 수준 테스트</a></div>
+            <div><a href="/dictionary">신조어 사전</a></div>
+            <div><a href="/quiz">신조어 퀴즈</a></div>
+        </div>
+        <div>LOGO</div>
+    </nav>
+
+    <!-- 테스트 -->
+    <div className="test-text">
+        <div className="text1">실력 평가 테스트</div>
+        <div className="text2">설문조사를 통해 자신의 실력을 평가 받으세요!!</div>
+    </div>
+
+    <div className="test-box">
+        <p className="select">
+            Questions 1.
+            <br />
+            <a>당신은 알고리즘에 대해서 얼마나 안다고 생각하십니까??</a> <br />
+            <input type="radio" id="s_1_1" name="shop1" value="1" /><label for="s_1_1">그냥 모름</label>
+            <input type="radio" id="s_1_2" name="shop1" value="2" /><label for="s_1_2">대충 모름</label>
+            <input type="radio" id="s_1_3" name="shop1" value="3" /><label for="s_1_3">보통</label>
+            <input type="radio" id="s_1_4" name="shop1" value="4" /><label for="s_1_4">적당히 앎</label>
+            <input type="radio" id="s_1_5" name="shop1" value="5" /><label for="s_1_5">완전 앎</label>
+        </p>
+        <p className="select">
+            Questions 2.
+            <br />
+            <a>당신은 현재 학교 전공수업에서 문제를 푸는데 어려움을 느끼지 않나요??</a> <br />
+            <input type="radio" id="s_2_1" name="shop2" value="1" /><label for="s_2_1">많이 느낀다</label>
+            <input type="radio" id="s_2_2" name="shop2" value="2" /><label for="s_2_2">조금 느낀다</label>
+            <input type="radio" id="s_2_3" name="shop2" value="3" /><label for="s_2_3">보통</label>
+            <input type="radio" id="s_2_4" name="shop2" value="4" /><label for="s_2_4">안 느낀다</label>
+            <input type="radio" id="s_2_5" name="shop2" value="5" /><label for="s_2_5">완전 안느낀다</label>
+        </p>
+        <p className="select">
+            Questions 3.
+            <br />
+            <a>당신은 온라인 알고리즘 사이트에서 문제를 풀어본적이 있나요??</a> <br />
+            <input type="radio" id="s_3_1" name="shop3" value="1" /><label for="s_3_1">아예 없음</label>
+            <input type="radio" id="s_3_2" name="shop3" value="2" /><label for="s_3_2">조금?</label>
+            <input type="radio" id="s_3_3" name="shop3" value="3" /><label for="s_3_3">보통</label>
+            <input type="radio" id="s_3_4" name="shop3" value="4" /><label for="s_3_4">꽤나?</label>
+            <input type="radio" id="s_3_5" name="shop3" value="5" /><label for="s_3_5">이민주급</label>
+        </p>
+        <p className="select">
+            Questions 4.
+            <br />
+            <a>당신은 대강 현재까지 코딩테스트 알고리즘 문제를 얼마나 풀어봤나요??</a> <br />
+            <input type="radio" id="s_4_1" name="shop4" value="1" /><label for="s_4_1">1도 안품</label>
+            <input type="radio" id="s_4_2" name="shop4" value="2" /><label for="s_4_2">조금</label>
+            <input type="radio" id="s_4_3" name="shop4" value="3" /><label for="s_4_3">보통</label>
+            <input type="radio" id="s_4_4" name="shop4" value="4" /><label for="s_4_4">꽤나?</label>
+            <input type="radio" id="s_4_5" name="shop4" value="5" /><label for="s_4_5">이민주급</label>
+        </p>
+        <p className="select">
+            Questions 5.
+            <br />
+            <a>기본적인 탐색 알고리즘(DFS, BFS)를 구현할 줄 안다</a> <br />
+            <input type="radio" id="s_5_1" name="shop5" value="1" /><label for="s_5_1">모른다</label>
+            <input type="radio" id="s_5_2" name="shop5" value="2" /><label for="s_5_2">알기만 함</label>
+            <input type="radio" id="s_5_3" name="shop5" value="3" /><label for="s_5_3">보통</label>
+            <input type="radio" id="s_5_4" name="shop5" value="4" /><label for="s_5_4">꽤나 할줄암</label>
+            <input type="radio" id="s_5_5" name="shop5" value="5" /><label for="s_5_5">완벽하게 함</label>
+        </p>
+        <p className="select">
+            Questions 6.
+            <br />
+            <a>DFS 알고리즘을 사용해서 백트래킹을 구현할 수 있나요??</a> <br />
+            <input type="radio" id="s_6_1" name="sho6" value="1" /><label for="s_6_1">할 줄 모름</label>
+            <input type="radio" id="s_6_2" name="sho6" value="2" /><label for="s_6_2">알기만 함</label>
+            <input type="radio" id="s_6_3" name="sho6" value="3" /><label for="s_6_3">보통</label>
+            <input type="radio" id="s_6_4" name="sho6" value="4" /><label for="s_6_4">꽤나해요</label>
+            <input type="radio" id="s_6_5" name="sho6" value="5" /><label for="s_6_5">완벽해요</label>
+        </p>
+        <p className="select">
+            Questions 7.
+            <br />
+            <a>그리디 문제를 풀어본적이 있습니까??</a> <br />
+            <input type="radio" id="s_7_1" name="shop7" value="1" /><label for="s_7_1">아니요</label>
+            <input type="radio" id="s_7_2" name="shop7" value="2" /><label for="s_7_2">찍먹만 해봄</label>
+            <input type="radio" id="s_7_3" name="shop7" value="3" /><label for="s_7_3">보통</label>
+            <input type="radio" id="s_7_4" name="shop7" value="4" /><label for="s_7_4">꽤나 풀어봄</label>
+            <input type="radio" id="s_7_5" name="shop7" value="5" /><label for="s_7_5">많이 풀어봄</label>
+        </p>
+        <p className="select">
+            Questions 8.
+            <br />
+            <a>Dynamic Programing - 최적화 이론을 코드로 옮길 수 있나요??</a> <br />
+            <input type="radio" id="s_8_1" name="shop8" value="1" /><label for="s_8_1">이게 뭐죠?</label>
+            <input type="radio" id="s_8_2" name="shop8" value="2" /><label for="s_8_2">조금은 알아요</label>
+            <input type="radio" id="s_8_3" name="shop8" value="3" /><label for="s_8_3">보통</label>
+            <input type="radio" id="s_8_4" name="shop8" value="4" /><label for="s_8_4">대강 할줄앎</label>
+            <input type="radio" id="s_8_5" name="shop8" value="5" /><label for="s_8_5">할수 있어요</label>
+        </p>
+        <p className="select">
+            Questions 9.
+            <br />
+            <a>다이나믹 프로그래밍에서 Bottom-up과 top-down 알고리즘 기법을 사용할 수 있나요?</a> <br />
+            <input type="radio" id="s_9_1" name="shop9" value="1" /><label for="s_9_1">이게 뭐죠?</label>
+            <input type="radio" id="s_9_2" name="shop9" value="2" /><label for="s_9_2">조금은 알아요</label>
+            <input type="radio" id="s_9_3" name="shop9" value="3" /><label for="s_9_3">보통</label>
+            <input type="radio" id="s_9_4" name="shop9" value="4" /><label for="s_9_4">꽤나 할줄앎</label>
+            <input type="radio" id="s_9_5" name="shop9" value="5" /><label for="s_9_5">할수 있어요</label>
+        </p>
+        <p className="select">
+            Questions 10.
+            <br />
+            <a>당신의 코딩 행복도는 어느정도 인가요??</a> <br />
+            <input type="radio" id="s_10_1" name="shop10" value="1" /><label for="s_10_1">죽겠어요</label>
+            <input type="radio" id="s_10_2" name="shop10" value="2" /><label for="s_10_2">할말이
+                없어요</label>
+            <input type="radio" id="s_10_3" name="shop10" value="3" /><label for="s_10_3">그냥그래요</label>
+            <input type="radio" id="s_10_4" name="shop10" value="4" /><label for="s_10_4">즐거움을
+                느낌</label>
+            <input type="radio" id="s_10_5" name="shop10" value="5" /><label for="s_10_5">행복을 느낌</label>
+        </p>
+
+        <div className="test-btn">
+            <Link to="/">
+            <button className="back">취소</button>
+            </Link>
+            <button className="submit">제출</button>
+        </div>
+
+        <a id="bal"></a>
+    </div>
+    <hr/>
+</body>
+</html>
