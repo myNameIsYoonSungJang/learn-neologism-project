@@ -42,37 +42,129 @@
             text-decoration: underline;
         }
 
-        .inner {
-            background: url("https://cdn.univ20.com/wp-content/uploads/2019/03/8f99cfafb96e1ef958f53cee53b3f5eb.png");
-            background-repeat: no-repeat;
-            background-size: 100% 700px;
+        .main-background {
+            background-color: rgb(255, 170, 79);
             width: 100%;
-            height: 700px;
-            position: relative;
+            height: 1050px;
         }
 
-        .inner::before {
-            content: "";
-            opacity: 0.4;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            right: 0px;
-            bottom: 0px;
-            background-color: #33332E;
+        #test-banner {
+            margin-top: 25px;
+            width: 100%;
+            height: 350px;
+            /* opacity: 0.9; */
         }
 
-        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Jua&display=swap');
+        table.type08 {
+            width: 90%;
+            height: 600px;
+            margin: 5px auto;
+            border-collapse: collapse;
+            text-align: left;
+            line-height: 1.5;
+            border: 2px solid rgb(99, 64, 0);
+        }
 
-        .main-banner-text {
-            font-family: 'Black Han Sans', sans-serif;
+        table.type08 thead th {
+            padding: 10px;
+            font-weight: bold;
+            border-top: 1px solid #ccc;
+            border-right: 1px solid rgb(154, 154, 154);
+            border-bottom: 1px solid rgb(99, 64, 0);
+            background: #dcdcd1;
+        }
+
+        table.type08 tbody th {
+            width: 150px;
+            padding: 10px 3px;
+            font-weight: bold;
+            vertical-align: top;
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            background: #ececec;
+            font-size: 13px;
+            line-height: 30px;
+        }
+
+        table.type08 td {
+            width: 110px;
+            padding: 10px;
+            vertical-align: top;
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            background: #ececec;
+        }
+
+        table.type08 tfoot td {
             text-align: center;
-            text-shadow: -5px 0px black, 0px 5px black, 5px 0px black, 0px -5px black;
-            font-size: 150px;
-            letter-spacing: 15px;
-            color: #F5CE96;
-            position: relative;
-            padding-top: 50px;
+            font-size: 20px;
+        }
+
+        /* radio button css*/
+        label {
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        [type="radio"] {
+            vertical-align: middle;
+            appearance: none;
+            border: max(2px, 0.1em) solid gray;
+            border-radius: 50%;
+            width: 1.25em;
+            height: 1.25em;
+            transition: border 0.5s ease-in-out;
+        }
+
+        [type="radio"]:checked {
+            border: 0.4em solid tomato;
+        }
+
+        [type="radio"]:focus-visible {
+            outline-offset: max(2px, 0.1em);
+            outline: max(2px, 0.1em) dotted tomato;
+        }
+
+        [type="radio"]:hover {
+            box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+            cursor: pointer;
+        }
+
+        [type="radio"]:disabled {
+            background-color: lightgray;
+            box-shadow: none;
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        [type="radio"]:disabled+span {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        a.button {
+            width: 120px;
+            height: 40px;
+            font-weight: 600;
+            text-align: center;
+            line-height: 40px;
+            color: #FFF;
+            border-radius: 5px;
+            transition: all 0.2s;
+        }
+
+        .btnOrange {
+            background: #FFAA40;
+        }
+
+        .btnFade.btnOrange:hover {
+            background: #FF8E00;
         }
     </style>
 </head>
@@ -90,125 +182,300 @@
         <div>LOGO</div>
     </nav>
 
-    <!-- 테스트 -->
-    <div className="test-text">
-        <div className="text1">실력 평가 테스트</div>
-        <div className="text2">설문조사를 통해 자신의 실력을 평가 받으세요!!</div>
+    <!-- content -->
+    <div class="main-background">
+        <img id="test-banner" src="https://www.librasol.com.br/wp-content/uploads/2018/12/QUIZ.jpg" alt="2022 신조어 능력평가">
+        <!-- <img id="test-banner" src="https://assets.telegraphindia.com/telegraph/2022/Sep/1663788855_new-project-79.jpg" alt="2022 신조어 능력평가"> -->
+        <table class="type08">
+            <thead>
+                <tr>
+                    <th scope="cols" colspan="5">신조어 능력 평가</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1. 다음 중 신조어 '재질'의 사용법과 가장 거리가 먼 것은?</th>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact1" value="email" checked />
+                            <span>이거 완전 내 재질</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact1" value="phone" />
+                            <span>치마 재질 벨벳이야?</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact1" value="fax" />
+                            <span>공주 재질 대박임</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact1" value="mail" />
+                            <span>삼겹살 재질 미쳤음</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2. 다음 중 성격이 다른 하나는?</th>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact2" value="email" checked />
+                            <span>X맨</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact2" value="phone" />
+                            <span>빌런</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact2" value="fax" />
+                            <span>임포</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact2" value="mail" />
+                            <span>조커</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3. 다음 중 '억텐'의 반댓말은?</th>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact3" value="email" checked />
+                            <span>텐텐</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact3" value="phone" />
+                            <span>찐텐</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact3" value="fax" />
+                            <span>개텐</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact3" value="mail" />
+                            <span>막텐</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4. 다음 중 '스불재'의 뜻 풀이로 옳은 것은?</th>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact4" value="email" checked />
+                            <span>스트레칭 불태우고 재만 남았다</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact4" value="phone" />
+                            <span>스트레스 불태우고 재밌게 놀자</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact4" value="fax" />
+                            <span>스스로 불러온 재앙</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact4" value="mail" />
+                            <span>스티로폼 불편해도 재활용</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">5. 다음 중 '주불'의 뜻 풀이로 옳은 것은?</th>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact5" value="email" checked />
+                            <span>주식으로 불로소득</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact5" value="phone" />
+                            <span>주술 불일치</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact5" value="fax" />
+                            <span>주식 불탄다</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact5" value="mail" />
+                            <span>주소 불러</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">6. 다음 중 '레게노'의 탄생 배경으로 옳은 것은?</th>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact6" value="email" checked />
+                            <span>영어 레전드를 잘못 읽었다</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact6" value="phone" />
+                            <span>레전드라는 표현을 새로 만들었다</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact6" value="fax" />
+                            <span>레게음악에서 영감을 받아 만들었다</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact6" value="mail" />
+                            <span>작곡 기법 레가토의 불어 발음이다</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">7. '완내스'와 같은 뜻을 가진 신조어는?</th>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact7" value="email" checked />
+                            <span>스몸비</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact7" value="phone" />
+                            <span>사바사</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact7" value="fax" />
+                            <span>취저</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact7" value="mail" />
+                            <span>스라밸</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">8. 다음 중 '군싹'의 뜻 풀이로 옳은 것은?</th>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact8" value="email" checked />
+                            <span>군고구마 바싹</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact8" value="phone" />
+                            <span>군침이 싹 도노</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact8" value="fax" />
+                            <span>군더더기 없이 싹 치웠노</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact8" value="mail" />
+                            <span>군대 칼각으로 싹 정리했네</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">9. 다음 중 '핑프'의 뜻 풀이로 옳은 것은?</th>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact9" value="email" checked />
+                            <span>핑크 프린스</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact9" value="phone" />
+                            <span>핑크 프린터</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact9" value="fax" />
+                            <span>핑거 프로젝트</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact9" value="mail" />
+                            <span>핑거 프린스</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">10. 다음 중 성격이 다른 하나는?</th>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact10" value="email" checked />
+                            <span>스푼</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact10" value="phone" />
+                            <span>릴스</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact10" value="fax" />
+                            <span>틱톡</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact10" value="mail" />
+                            <span>쇼츠</span>
+                        </label>
+                    </td>
+                </tr>
+            <tfoot>
+                <tr>
+                    <td colspan="5">
+                        <span>
+                            문제를 다 풀었다면 결과보기 버튼을 눌러주세요!
+                            <a href="" title="Button fade orange" class="button btnFade btnOrange" style="display: inline-block;">결과 보기!</a>
+                        </span>
+                    </td>
+                </tr>
+            </tfoot>
+            </tbody>
+        </table>
     </div>
-
-    <div className="test-box">
-        <p className="select">
-            Questions 1.
-            <br />
-            <a>당신은 알고리즘에 대해서 얼마나 안다고 생각하십니까??</a> <br />
-            <input type="radio" id="s_1_1" name="shop1" value="1" /><label for="s_1_1">그냥 모름</label>
-            <input type="radio" id="s_1_2" name="shop1" value="2" /><label for="s_1_2">대충 모름</label>
-            <input type="radio" id="s_1_3" name="shop1" value="3" /><label for="s_1_3">보통</label>
-            <input type="radio" id="s_1_4" name="shop1" value="4" /><label for="s_1_4">적당히 앎</label>
-            <input type="radio" id="s_1_5" name="shop1" value="5" /><label for="s_1_5">완전 앎</label>
-        </p>
-        <p className="select">
-            Questions 2.
-            <br />
-            <a>당신은 현재 학교 전공수업에서 문제를 푸는데 어려움을 느끼지 않나요??</a> <br />
-            <input type="radio" id="s_2_1" name="shop2" value="1" /><label for="s_2_1">많이 느낀다</label>
-            <input type="radio" id="s_2_2" name="shop2" value="2" /><label for="s_2_2">조금 느낀다</label>
-            <input type="radio" id="s_2_3" name="shop2" value="3" /><label for="s_2_3">보통</label>
-            <input type="radio" id="s_2_4" name="shop2" value="4" /><label for="s_2_4">안 느낀다</label>
-            <input type="radio" id="s_2_5" name="shop2" value="5" /><label for="s_2_5">완전 안느낀다</label>
-        </p>
-        <p className="select">
-            Questions 3.
-            <br />
-            <a>당신은 온라인 알고리즘 사이트에서 문제를 풀어본적이 있나요??</a> <br />
-            <input type="radio" id="s_3_1" name="shop3" value="1" /><label for="s_3_1">아예 없음</label>
-            <input type="radio" id="s_3_2" name="shop3" value="2" /><label for="s_3_2">조금?</label>
-            <input type="radio" id="s_3_3" name="shop3" value="3" /><label for="s_3_3">보통</label>
-            <input type="radio" id="s_3_4" name="shop3" value="4" /><label for="s_3_4">꽤나?</label>
-            <input type="radio" id="s_3_5" name="shop3" value="5" /><label for="s_3_5">이민주급</label>
-        </p>
-        <p className="select">
-            Questions 4.
-            <br />
-            <a>당신은 대강 현재까지 코딩테스트 알고리즘 문제를 얼마나 풀어봤나요??</a> <br />
-            <input type="radio" id="s_4_1" name="shop4" value="1" /><label for="s_4_1">1도 안품</label>
-            <input type="radio" id="s_4_2" name="shop4" value="2" /><label for="s_4_2">조금</label>
-            <input type="radio" id="s_4_3" name="shop4" value="3" /><label for="s_4_3">보통</label>
-            <input type="radio" id="s_4_4" name="shop4" value="4" /><label for="s_4_4">꽤나?</label>
-            <input type="radio" id="s_4_5" name="shop4" value="5" /><label for="s_4_5">이민주급</label>
-        </p>
-        <p className="select">
-            Questions 5.
-            <br />
-            <a>기본적인 탐색 알고리즘(DFS, BFS)를 구현할 줄 안다</a> <br />
-            <input type="radio" id="s_5_1" name="shop5" value="1" /><label for="s_5_1">모른다</label>
-            <input type="radio" id="s_5_2" name="shop5" value="2" /><label for="s_5_2">알기만 함</label>
-            <input type="radio" id="s_5_3" name="shop5" value="3" /><label for="s_5_3">보통</label>
-            <input type="radio" id="s_5_4" name="shop5" value="4" /><label for="s_5_4">꽤나 할줄암</label>
-            <input type="radio" id="s_5_5" name="shop5" value="5" /><label for="s_5_5">완벽하게 함</label>
-        </p>
-        <p className="select">
-            Questions 6.
-            <br />
-            <a>DFS 알고리즘을 사용해서 백트래킹을 구현할 수 있나요??</a> <br />
-            <input type="radio" id="s_6_1" name="sho6" value="1" /><label for="s_6_1">할 줄 모름</label>
-            <input type="radio" id="s_6_2" name="sho6" value="2" /><label for="s_6_2">알기만 함</label>
-            <input type="radio" id="s_6_3" name="sho6" value="3" /><label for="s_6_3">보통</label>
-            <input type="radio" id="s_6_4" name="sho6" value="4" /><label for="s_6_4">꽤나해요</label>
-            <input type="radio" id="s_6_5" name="sho6" value="5" /><label for="s_6_5">완벽해요</label>
-        </p>
-        <p className="select">
-            Questions 7.
-            <br />
-            <a>그리디 문제를 풀어본적이 있습니까??</a> <br />
-            <input type="radio" id="s_7_1" name="shop7" value="1" /><label for="s_7_1">아니요</label>
-            <input type="radio" id="s_7_2" name="shop7" value="2" /><label for="s_7_2">찍먹만 해봄</label>
-            <input type="radio" id="s_7_3" name="shop7" value="3" /><label for="s_7_3">보통</label>
-            <input type="radio" id="s_7_4" name="shop7" value="4" /><label for="s_7_4">꽤나 풀어봄</label>
-            <input type="radio" id="s_7_5" name="shop7" value="5" /><label for="s_7_5">많이 풀어봄</label>
-        </p>
-        <p className="select">
-            Questions 8.
-            <br />
-            <a>Dynamic Programing - 최적화 이론을 코드로 옮길 수 있나요??</a> <br />
-            <input type="radio" id="s_8_1" name="shop8" value="1" /><label for="s_8_1">이게 뭐죠?</label>
-            <input type="radio" id="s_8_2" name="shop8" value="2" /><label for="s_8_2">조금은 알아요</label>
-            <input type="radio" id="s_8_3" name="shop8" value="3" /><label for="s_8_3">보통</label>
-            <input type="radio" id="s_8_4" name="shop8" value="4" /><label for="s_8_4">대강 할줄앎</label>
-            <input type="radio" id="s_8_5" name="shop8" value="5" /><label for="s_8_5">할수 있어요</label>
-        </p>
-        <p className="select">
-            Questions 9.
-            <br />
-            <a>다이나믹 프로그래밍에서 Bottom-up과 top-down 알고리즘 기법을 사용할 수 있나요?</a> <br />
-            <input type="radio" id="s_9_1" name="shop9" value="1" /><label for="s_9_1">이게 뭐죠?</label>
-            <input type="radio" id="s_9_2" name="shop9" value="2" /><label for="s_9_2">조금은 알아요</label>
-            <input type="radio" id="s_9_3" name="shop9" value="3" /><label for="s_9_3">보통</label>
-            <input type="radio" id="s_9_4" name="shop9" value="4" /><label for="s_9_4">꽤나 할줄앎</label>
-            <input type="radio" id="s_9_5" name="shop9" value="5" /><label for="s_9_5">할수 있어요</label>
-        </p>
-        <p className="select">
-            Questions 10.
-            <br />
-            <a>당신의 코딩 행복도는 어느정도 인가요??</a> <br />
-            <input type="radio" id="s_10_1" name="shop10" value="1" /><label for="s_10_1">죽겠어요</label>
-            <input type="radio" id="s_10_2" name="shop10" value="2" /><label for="s_10_2">할말이
-                없어요</label>
-            <input type="radio" id="s_10_3" name="shop10" value="3" /><label for="s_10_3">그냥그래요</label>
-            <input type="radio" id="s_10_4" name="shop10" value="4" /><label for="s_10_4">즐거움을
-                느낌</label>
-            <input type="radio" id="s_10_5" name="shop10" value="5" /><label for="s_10_5">행복을 느낌</label>
-        </p>
-
-        <div className="test-btn">
-            <Link to="/">
-            <button className="back">취소</button>
-            </Link>
-            <button className="submit">제출</button>
-        </div>
-
-        <a id="bal"></a>
-    </div>
-    <hr/>
 </body>
+
 </html>
