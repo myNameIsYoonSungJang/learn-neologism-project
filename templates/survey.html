@@ -167,6 +167,33 @@
             background: #FF8E00;
         }
     </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            let count = 0;
+            $("#a-tag-button").click(function () {
+                count += Number($('input[name=contact1]:checked').val());
+                count += Number($('input[name=contact2]:checked').val());
+                count += Number($('input[name=contact3]:checked').val());
+                count += Number($('input[name=contact4]:checked').val());
+                count += Number($('input[name=contact5]:checked').val());
+                count += Number($('input[name=contact6]:checked').val());
+                count += Number($('input[name=contact7]:checked').val());
+                count += Number($('input[name=contact8]:checked').val());
+                count += Number($('input[name=contact9]:checked').val());
+                count += Number($('input[name=contact10]:checked').val());
+                if(count < 4){
+                    alert("당신은 " + count + "개를 맞춰 신조어 초보자입니다!");
+                }else if(count < 8){
+                    alert("당신은 " + count + "개를 맞춰 신조어 중급자입니다!");
+                }else{
+                    alert("당신은 " + count + "개를 맞춰 신조어 상급자입니다!");
+                }
+                count = 0;
+            })
+        });
+    </script>
 </head>
 
 <body>
@@ -197,25 +224,25 @@
                     <th scope="row">1. 다음 중 신조어 '재질'의 사용법과 가장 거리가 먼 것은?</th>
                     <td>
                         <label>
-                            <input type="radio" name="contact1" value="email" checked />
+                            <input type="radio" name="contact1" value=0 checked />
                             <span>이거 완전 내 재질</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact1" value="phone" />
+                            <input type="radio" name="contact1" value=1 />
                             <span>치마 재질 벨벳이야?</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact1" value="fax" />
+                            <input type="radio" name="contact1" value=0 />
                             <span>공주 재질 대박임</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact1" value="mail" />
+                            <input type="radio" name="contact1" value=0 />
                             <span>삼겹살 재질 미쳤음</span>
                         </label>
                     </td>
@@ -224,25 +251,25 @@
                     <th scope="row">2. 다음 중 성격이 다른 하나는?</th>
                     <td>
                         <label>
-                            <input type="radio" name="contact2" value="email" checked />
+                            <input type="radio" name="contact2" value=0 checked />
                             <span>X맨</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact2" value="phone" />
+                            <input type="radio" name="contact2" value=0 />
                             <span>빌런</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact2" value="fax" />
+                            <input type="radio" name="contact2" value=0 />
                             <span>임포</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact2" value="mail" />
+                            <input type="radio" name="contact2" value=1 />
                             <span>조커</span>
                         </label>
                     </td>
@@ -251,25 +278,25 @@
                     <th scope="row">3. 다음 중 '억텐'의 반댓말은?</th>
                     <td>
                         <label>
-                            <input type="radio" name="contact3" value="email" checked />
+                            <input type="radio" name="contact3" value=0 checked />
                             <span>텐텐</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact3" value="phone" />
+                            <input type="radio" name="contact3" value=1 />
                             <span>찐텐</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact3" value="fax" />
+                            <input type="radio" name="contact3" value=0 />
                             <span>개텐</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact3" value="mail" />
+                            <input type="radio" name="contact3" value=0 />
                             <span>막텐</span>
                         </label>
                     </td>
@@ -278,25 +305,25 @@
                     <th scope="row">4. 다음 중 '스불재'의 뜻 풀이로 옳은 것은?</th>
                     <td>
                         <label>
-                            <input type="radio" name="contact4" value="email" checked />
+                            <input type="radio" name="contact4" value=0 checked />
                             <span>스트레칭 불태우고 재만 남았다</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact4" value="phone" />
+                            <input type="radio" name="contact4" value=0 />
                             <span>스트레스 불태우고 재밌게 놀자</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact4" value="fax" />
+                            <input type="radio" name="contact4" value=1 />
                             <span>스스로 불러온 재앙</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact4" value="mail" />
+                            <input type="radio" name="contact4" value=0 />
                             <span>스티로폼 불편해도 재활용</span>
                         </label>
                     </td>
@@ -305,25 +332,25 @@
                     <th scope="row">5. 다음 중 '주불'의 뜻 풀이로 옳은 것은?</th>
                     <td>
                         <label>
-                            <input type="radio" name="contact5" value="email" checked />
+                            <input type="radio" name="contact5" value=0 checked />
                             <span>주식으로 불로소득</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact5" value="phone" />
+                            <input type="radio" name="contact5" value=0 />
                             <span>주술 불일치</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact5" value="fax" />
+                            <input type="radio" name="contact5" value=0 />
                             <span>주식 불탄다</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact5" value="mail" />
+                            <input type="radio" name="contact5" value=1 />
                             <span>주소 불러</span>
                         </label>
                     </td>
@@ -332,25 +359,25 @@
                     <th scope="row">6. 다음 중 '레게노'의 탄생 배경으로 옳은 것은?</th>
                     <td>
                         <label>
-                            <input type="radio" name="contact6" value="email" checked />
+                            <input type="radio" name="contact6" value=1 checked />
                             <span>영어 레전드를 잘못 읽었다</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact6" value="phone" />
+                            <input type="radio" name="contact6" value=0 />
                             <span>레전드라는 표현을 새로 만들었다</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact6" value="fax" />
+                            <input type="radio" name="contact6" value=0 />
                             <span>레게음악에서 영감을 받아 만들었다</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact6" value="mail" />
+                            <input type="radio" name="contact6" value=0 />
                             <span>작곡 기법 레가토의 불어 발음이다</span>
                         </label>
                     </td>
@@ -359,25 +386,25 @@
                     <th scope="row">7. '완내스'와 같은 뜻을 가진 신조어는?</th>
                     <td>
                         <label>
-                            <input type="radio" name="contact7" value="email" checked />
+                            <input type="radio" name="contact7" value=0 checked />
                             <span>스몸비</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact7" value="phone" />
+                            <input type="radio" name="contact7" value=0 />
                             <span>사바사</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact7" value="fax" />
+                            <input type="radio" name="contact7" value=1 />
                             <span>취저</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact7" value="mail" />
+                            <input type="radio" name="contact7" value=0 />
                             <span>스라밸</span>
                         </label>
                     </td>
@@ -386,25 +413,25 @@
                     <th scope="row">8. 다음 중 '군싹'의 뜻 풀이로 옳은 것은?</th>
                     <td>
                         <label>
-                            <input type="radio" name="contact8" value="email" checked />
+                            <input type="radio" name="contact8" value=0 checked />
                             <span>군고구마 바싹</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact8" value="phone" />
+                            <input type="radio" name="contact8" value=1 />
                             <span>군침이 싹 도노</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact8" value="fax" />
+                            <input type="radio" name="contact8" value=0 />
                             <span>군더더기 없이 싹 치웠노</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact8" value="mail" />
+                            <input type="radio" name="contact8" value=0 />
                             <span>군대 칼각으로 싹 정리했네</span>
                         </label>
                     </td>
@@ -413,25 +440,25 @@
                     <th scope="row">9. 다음 중 '핑프'의 뜻 풀이로 옳은 것은?</th>
                     <td>
                         <label>
-                            <input type="radio" name="contact9" value="email" checked />
+                            <input type="radio" name="contact9" value=0 checked />
                             <span>핑크 프린스</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact9" value="phone" />
+                            <input type="radio" name="contact9" value=0 />
                             <span>핑크 프린터</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact9" value="fax" />
+                            <input type="radio" name="contact9" value=0 />
                             <span>핑거 프로젝트</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact9" value="mail" />
+                            <input type="radio" name="contact9" value=1 />
                             <span>핑거 프린스</span>
                         </label>
                     </td>
@@ -440,25 +467,25 @@
                     <th scope="row">10. 다음 중 성격이 다른 하나는?</th>
                     <td>
                         <label>
-                            <input type="radio" name="contact10" value="email" checked />
+                            <input type="radio" name="contact10" value=1 checked />
                             <span>스푼</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact10" value="phone" />
+                            <input type="radio" name="contact10" value=0 />
                             <span>릴스</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact10" value="fax" />
+                            <input type="radio" name="contact10" value=0 />
                             <span>틱톡</span>
                         </label>
                     </td>
                     <td>
                         <label>
-                            <input type="radio" name="contact10" value="mail" />
+                            <input type="radio" name="contact10" value=0 />
                             <span>쇼츠</span>
                         </label>
                     </td>
@@ -468,7 +495,8 @@
                     <td colspan="5">
                         <span>
                             문제를 다 풀었다면 결과보기 버튼을 눌러주세요!
-                            <a href="" title="Button fade orange" class="button btnFade btnOrange" style="display: inline-block;">결과 보기!</a>
+                            <a href="#" id="a-tag-button" title="Button fade orange" class="button btnFade btnOrange"
+                                style="display: inline-block;">결과 보기!</a>
                         </span>
                     </td>
                 </tr>
