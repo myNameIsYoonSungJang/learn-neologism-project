@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Jua&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&display=swap" rel="stylesheet">
     <style>
         .menubar {
             display: flex;
@@ -46,10 +46,10 @@
         }
 
         .main1-background{
-            background-color: white;
+            background-color: rgb(250, 250, 250);
             width: 100%;
-            height: 1100px;
-            background: url("https://www.gnunews.kr/news/photo/201910/8743_64_0000.jpg") no-repeat;
+            height: 1300px;
+            /* background: url("https://www.gnunews.kr/news/photo/201910/8743_64_0000.jpg") no-repeat; */
             background-size: 100% 1100px;
         }
 
@@ -63,47 +63,62 @@
 
         @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
         .main1-title{
-            /* background-color: black; */
             width: 1000px;
             height: 200px;
             margin: 0 auto;
             padding-top: 50px;
             font-family: 'Anton', 산세리프;
             font-size: 180px;
-            background-image: linear-gradient(90deg, red, orange, yellow, green, blue, navy, purple);
-            -webkit-background-clip: text;
-            color: transparent;
+            color: black;
             text-align: center;
             line-height: 100px;
+            text-shadow: 8px 8px 8px gray;
         }
 
+        @import url('https://fonts.googleapis.com/css2? family= Pacifico & display=swap');
         .sub1-title{
             /* background-color: black; */
             width: 700px;
             height: 60px;
             margin: 20px auto;
+            font-size: 30px;
+            color: black;
+            text-align: center;
+            font-family: 'Pacifico', 필기체;
         }
 
         .line-separate{
             width: 100%;
-            height: 300px;
-            /* background-color: rgba(255, 136, 0, 0.893); */
-            padding-top: 50px;
+            height: 280px;
+            background-color: rgba(255, 136, 0, 0.893);
+            padding-top: 40px;
         }
 
         .effect-block{
             width: 80%;
-            height: 80%;
+            height: 200px;
             margin: 0 auto;
             display: flex;
             justify-content: space-evenly;
-            /* background-color: white; */
         }
 
-        .effect-block div{
-            background-color: black;
-            width: 260px;
+        .effect-block > div{
+            width: 280px;
             height: 200px;
+        }
+
+        .effect-block div .title{
+            margin-top: 20px;
+            height: 80px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 23px;
+        }
+
+        .effect-block div .content{
+            /* margin-top: 5px; */
+            text-align: center;
+            font-size: 18px;
         }
     </style>
 </head>
@@ -125,18 +140,33 @@
     <div class="main1-background">
         <div class="main1-title-block">
             <div class="main1-title">NEOLOGISMS</div>
-            <div class="sub1-title"></div>
+            <div class="sub1-title">Improve your skills! Reduce conflict!</div>
         </div>
         <div class="line-separate">
             <div class="effect-block">
                 <div id="effect1">
-                    세대 간 언어 장벽 붕괴 및 세대 갈등 완화
+                    <div class="title">
+                        당신의 신조어 수준을 <br>테스트하십시오!
+                    </div>
+                    <div class="content">
+                        당신의 신조어 기술이 얼마나 좋은지 알아보기 위해 설문조사를 해보세요.
+                    </div>
                 </div>
                 <div id="effect2">
-
+                    <div class="title">
+                        타잍이타이틀
+                    </div>
+                    <div class="content">
+                        콘텐츠콘텐츠
+                    </div>
                 </div>
                 <div id="effect3">
-
+                    <div class="title">
+                        22222ㅁㄴㅇㄹw
+                    </div>
+                    <div class="content">
+                        2222ㅁㄴㅇㄹw
+                    </div>
                 </div>
             </div>
         </div>
