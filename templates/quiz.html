@@ -41,7 +41,158 @@
             color: white;
             text-decoration: underline;
         }
+
+        .main-background {
+            background-color: rgb(165, 122, 208);
+            width: 100%;
+            height: 1050px;
+        }
+
+        #test-banner {
+            margin-top: 5px;
+            margin-left: 150px;
+            width: 80%;
+            height: 350px;
+            /* opacity: 0.9; */
+        }
+
+        table.type08 {
+            width: 90%;
+            height: 600px;
+            margin: 5px auto;
+            border-collapse: collapse;
+            text-align: left;
+            line-height: 1.5;
+            border: 2px solid rgb(99, 64, 0);
+        }
+
+        table.type08 thead th {
+            padding: 10px;
+            font-weight: bold;
+            border-top: 1px solid #ccc;
+            border-right: 1px solid rgb(154, 154, 154);
+            border-bottom: 1px solid rgb(99, 64, 0);
+            background: #dcdcd1;
+        }
+
+        table.type08 tbody th {
+            width: 150px;
+            padding: 10px 3px;
+            font-weight: bold;
+            vertical-align: top;
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            background: #ececec;
+            font-size: 13px;
+            line-height: 30px;
+        }
+
+        table.type08 td {
+            width: 110px;
+            padding: 10px;
+            vertical-align: top;
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            background: #ececec;
+        }
+
+        table.type08 tfoot td {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        /* radio button css*/
+        label {
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        [type="radio"] {
+            vertical-align: middle;
+            appearance: none;
+            border: max(2px, 0.1em) solid gray;
+            border-radius: 50%;
+            width: 1.25em;
+            height: 1.25em;
+            transition: border 0.5s ease-in-out;
+        }
+
+        [type="radio"]:checked {
+            border: 0.4em solid tomato;
+        }
+
+        [type="radio"]:focus-visible {
+            outline-offset: max(2px, 0.1em);
+            outline: max(2px, 0.1em) dotted tomato;
+        }
+
+        [type="radio"]:hover {
+            box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+            cursor: pointer;
+        }
+
+        [type="radio"]:disabled {
+            background-color: lightgray;
+            box-shadow: none;
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        [type="radio"]:disabled+span {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        a.button {
+            width: 120px;
+            height: 40px;
+            font-weight: 600;
+            text-align: center;
+            line-height: 40px;
+            color: #FFF;
+            border-radius: 5px;
+            transition: all 0.2s;
+        }
+
+        .btnOrange {
+            background: #FFAA40;
+        }
+
+        .btnFade.btnOrange:hover {
+            background: #FF8E00;
+        }
     </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            let count = 0;
+            $("#a-tag-button").click(function () {
+                count += Number($('input[name=contact1]:checked').val());
+                count += Number($('input[name=contact2]:checked').val());
+                count += Number($('input[name=contact3]:checked').val());
+                count += Number($('input[name=contact4]:checked').val());
+                count += Number($('input[name=contact5]:checked').val());
+                count += Number($('input[name=contact6]:checked').val());
+                count += Number($('input[name=contact7]:checked').val());
+                count += Number($('input[name=contact8]:checked').val());
+                count += Number($('input[name=contact9]:checked').val());
+                count += Number($('input[name=contact10]:checked').val());
+                if(count < 8){
+                    alert("이런,,, " + count + "개를 맞춰 타이틀 획득에 실패하였습니다.");
+                }else{
+                    alert("축하합니다! " + count + "개를 맞춰 신조어 능력자가 되셨습니다.");
+                }
+                count = 0;
+            })
+        });
+    </script>
 </head>
 
 <body>
@@ -56,6 +207,301 @@
         </div>
         <div>LOGO</div>
     </nav>
+
+    <!-- content -->
+    <div class="main-background">
+        <img id="test-banner" src="https://thumbs.dreamstime.com/b/test-time-education-exam-deadline-sign-banner-student-school-score-grades-examination-classroom-evaluation-testing-242968388.jpg" alt="final test">
+        <table class="type08">
+            <thead>
+                <tr>
+                    <th scope="cols" colspan="5">신조어 능력 평가</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1. 다음 중 '오저치고'의 뜻 풀이로 옳은 것은?</th>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact1" value=0 checked />
+                            <span>오전 저용량 고 반복으로 무게 치자</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact1" value=1 />
+                            <span>오늘 저녁 치킨 고?</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact1" value=0 />
+                            <span>오빠 저 사실 치질있는거 고백할게요</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact1" value=0 />
+                            <span>오 저렇게 치사하고 고약한 녀석</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2. 다음 중 '갑통알'의 뜻 풀이로 옳은 것은?</th>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact2" value=0 checked />
+                            <span>갑자기 통통튀는 아르바이트생</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact2" value=0 />
+                            <span>갑자기 통했어 알잖아?</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact2" value=0 />
+                            <span>갑자기 통보 받은 알바잘림</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact2" value=1 />
+                            <span>갑자기 통장을 보니 알바 해야겠다</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3. 다음 중 '분조카'의 뜻 풀이로 옳은 것은?</th>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact3" value=0 checked />
+                            <span>분위기 조졌다 카드내놔</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact3" value=1 />
+                            <span>분위기 좋은 카페</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact3" value=0 />
+                            <span>분노 조절 카드</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact3" value=0 />
+                            <span>분노 조절 카운터</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4. 다음 중 '좋댓구알'에 가장 어울리는 하나는?</th>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact4" value=0 checked />
+                            <span>페이스북</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact4" value=0 />
+                            <span>구글</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact4" value=1 />
+                            <span>유튜브</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact4" value=0 />
+                            <span>인스타그램</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">5. 다음 중 '식집사'의 뜻 풀이로 옳은 것은?</th>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact5" value=0 checked />
+                            <span>식당 + 집사</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact5" value=0 />
+                            <span>씩씩하다 + 집사</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact5" value=0 />
+                            <span>음식만 주로 만들어주는 집사</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact5" value=1 />
+                            <span>식물 + 집사</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">6. 다음 중 '반모'의 탄생 배경으로 옳은 것은?</th>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact6" value=1 checked />
+                            <span>인터넷 상에서 만난 사람들과 반말을 쓰려고 만들어졌다</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact6" value=0 />
+                            <span>오래된 옛 학교 반 친구들의 모임이라는 뜻으로 만들어졌다</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact6" value=0 />
+                            <span>두부를 살 때, 반만 사겠다는 뜻이다</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact6" value=0 />
+                            <span>모임이 너무 커져서 인원의 반만 모이자는 뜻이다</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">7. '갈비'와 반대되는 뜻을 가진 하나는?</th>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact7" value=0 checked />
+                            <span>구이</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact7" value=0 />
+                            <span>오운완</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact7" value=1 />
+                            <span>볼매</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact7" value=0 />
+                            <span>갑통알</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">8. 다음 중 '너또다'의 뜻 풀이로 옳은 것은?</th>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact8" value=0 checked />
+                            <span>너 또 다쳤어?</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact8" value=1 />
+                            <span>너 또 다이어트?</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact8" value=0 />
+                            <span>너 또 다시?</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact8" value=0 />
+                            <span>너 또 다진마늘</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">9. 다음 중 '얼죽아'의 반댓말은?</th>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact9" value=0 checked />
+                            <span>뜨죽아</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact9" value=0 />
+                            <span>녹초라</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact9" value=0 />
+                            <span>따죽따</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact9" value=1 />
+                            <span>쪄죽따</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">10. 다음 중 성격이 다른 하나는?</th>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact10" value=1 checked />
+                            <span>우영우</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact10" value=0 />
+                            <span>닝바닝</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact10" value=0 />
+                            <span>케바케</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="contact10" value=0 />
+                            <span>사바사</span>
+                        </label>
+                    </td>
+                </tr>
+            <tfoot>
+                <tr>
+                    <td colspan="5">
+                        <span>
+                            문제를 다 풀었다면 결과보기 버튼을 눌러주세요!
+                            <a href="#" id="a-tag-button" title="Button fade orange" class="button btnFade btnOrange"
+                                style="display: inline-block;">결과 보기!</a>
+                        </span>
+                    </td>
+                </tr>
+            </tfoot>
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>

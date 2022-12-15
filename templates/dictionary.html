@@ -41,6 +41,120 @@
             color: white;
             text-decoration: underline;
         }
+
+        .main-background {
+            width: 100%;
+            height: 1960px;
+            background-color: rgb(250, 190, 70);
+        }
+
+        .dic-banner {
+            width: 80%;
+            height: 550px;
+            margin: 0 auto;
+            background-image: url("https://www.ntaskmanager.com/wp-content/uploads/2019/02/Project-Management-Terms-blog-header-1.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            line-height: 460px;
+        }
+
+        .dic-banner div {
+            transform: rotate(-13deg);
+            font-size: 25px;
+            font-weight: bold;
+            margin-left: 150px;
+        }
+
+        #dic-div {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        table {
+            border: 1px #a39485 solid;
+            font-size: .9em;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .25);
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        thead {
+            font-weight: bold;
+            color: #fff;
+            background: #73685d;
+        }
+
+        td,
+        th {
+            padding: 1em .5em;
+            vertical-align: middle;
+        }
+
+        td {
+            border-bottom: 1px solid rgba(0, 0, 0, .1);
+            background: #fff;
+        }
+
+        a {
+            color: #73685d;
+        }
+
+        @media all and (max-width: 768px) {
+
+            table,
+            thead,
+            tbody,
+            th,
+            td,
+            tr {
+                display: block;
+            }
+
+            th {
+                text-align: right;
+            }
+
+            table {
+                position: relative;
+                padding-bottom: 0;
+                border: none;
+                box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+            }
+
+            thead {
+                float: left;
+                white-space: nowrap;
+            }
+
+            tbody {
+                overflow-x: auto;
+                overflow-y: hidden;
+                position: relative;
+                white-space: nowrap;
+            }
+
+            tr {
+                display: inline-block;
+                vertical-align: top;
+            }
+
+            th {
+                border-bottom: 1px solid #a39485;
+            }
+
+            td {
+                border-bottom: 1px solid #e5e5e5;
+            }
+
+
+        }
     </style>
 </head>
 
@@ -56,6 +170,158 @@
         </div>
         <div>LOGO</div>
     </nav>
+
+    <!-- content -->
+    <div class="main-background">
+        <div class="dic-banner">
+            <div>dictionary</div>
+        </div>
+        <div id="dic-div">
+            <table id="dic-table">
+                <thead>
+                    <tr>
+                        <th colspan="3" style="border-bottom:1px solid white">초급 사전</th>
+                    </tr>
+                    <tr>
+                        <th>신조어</th>
+                        <th>뜻</th>
+                        <th>기타</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>TMI</td>
+                        <td>필요치 않은 사소한 것까지 하나하나 설명하는 사람을 뜻한다</td>
+                        <td>정치인들의 사소하면서 딱히 알고 싶지 않은 정보들이 짤방화되어 인터넷에 퍼졌다.</td>
+                    </tr>
+                    <tr>
+                        <td>분조카</td>
+                        <td>분위기 좋은 카페라는 뜻이다</td>
+                        <td>분위기 좋은 카페의 앞 글자만 딴 신조어이다. 분좋카에서 분조카, #분조카로 인스타에서 사용한다</td>
+                    </tr>
+                    <tr>
+                        <td>돼지런하다</td>
+                        <td>평소에는 느린데 먹을때만 되면 부지런해지는 사람을 뜻한다</td>
+                        <td>종종 돼지 (Run)으로 착각하는 분들이 있지만, 돼지런하다는 위와 같은 뜻을 의미한다.</td>
+                    </tr>
+                    <tr>
+                        <td>좋댓구알</td>
+                        <td>좋아요, 댓글, 구독, 알림설정 이라는 뜻이다</td>
+                        <td>유튜버들이 가장 자주 하는 말이며, 구독자를 늘리고, 홍보하는 수단이다</td>
+                    </tr>
+                    <tr>
+                        <td>반모</td>
+                        <td>반말모드의 줄임말이다.</td>
+                        <td>인터넷에서 만난 사람들끼리 반말로 대화하는 것을 말한다. 반말모드를 취소할 땐, 반박이라고 한다.</td>
+                    </tr>
+                    <tr>
+                        <td>케바케</td>
+                        <td>Case By Case 의 줄임말이다.</td>
+                        <td>이 단에로 인해, 다양한 응용 신조어들이 나타났다. ex) 사바사, 점바점 등등</td>
+                    </tr>
+                    <tr>
+                        <td>롬곡</td>
+                        <td>눈물을 뒤집어서 쓴 것이다</td>
+                        <td>모양의 유사성을 가지고 재창조한다는 야민정음 중 하나이다. 이 외에 커엽다, 네넴띤 등이 있다</td>
+                    </tr>
+                    <tr>
+                        <td>점메추</td>
+                        <td>점심 메뉴 추천의 줄임말이다</td>
+                        <td>점메추와 같이 아메추, 저메추가 있다</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+            <table id="dic-table">
+                <thead>
+                    <tr>
+                        <th colspan="3" style="border-bottom:1px solid white">중급 사전</th>
+                    </tr>
+                    <tr>
+                        <th>신조어</th>
+                        <th>뜻</th>
+                        <th>기타</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>소확행</td>
+                        <td>소소하지만 확실한 행복의 줄임말이다</td>
+                        <td>방송에서 연예인들이 무분별하게 소확행이란 용어를 남발하며 사용하기 시작하면서 유명해졌다</td>
+                    </tr>
+                    <tr>
+                        <td>식집사</td>
+                        <td>식물과 집사의 합성어이다</td>
+                        <td>고양이를 키우는 사람을 뜻하는 '집사'에서 유래된 것으로 식물을 가족같이 돌보며 애정을 쏟는 사람들을 일컫는 말이다</td>
+                    </tr>
+                    <tr>
+                        <td>오저치고</td>
+                        <td>오늘 저녁 치킨 고의 줄임말이다</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>갑통알</td>
+                        <td>갑자기 통장을보니 알바해야겠다 의 줄임말이다</td>
+                        <td>원래는 대학생, 취업준비생이 사용하던 신조어이다. 비슷한 의미로 '월급로그아웃'이 있다</td>
+                    </tr>
+                    <tr>
+                        <td>너또다</td>
+                        <td>너 또 다이어트해? 의 줄임말이다</td>
+                        <td>보통 "다이어트 언제까지 가나 보자"는 식으로 쓴다</td>
+                    </tr>
+                    <tr>
+                        <td>완내스</td>
+                        <td>완전 내 스타일의 줄임말</td>
+                        <td>자신의 취향에 꼭 맞는 것을 봤을 때 쓰는 말이다</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+            <table id="dic-table">
+                <thead>
+                    <tr>
+                        <th colspan="3" style="border-bottom:1px solid white">상급 사전</th>
+                    </tr>
+                    <tr>
+                        <th>신조어</th>
+                        <th>뜻</th>
+                        <th>기타</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>얼죽아</td>
+                        <td>얼어 죽어도 아이스 아메리카노 의 줄임말이다</td>
+                        <td>얼어 죽어도 아이스커피 협회도 존재하며, 반댓말로는 쪄죽따가 있다</td>
+                    </tr>
+                    <tr>
+                        <td>애빼시</td>
+                        <td>애교 빼면 시체의 줄임말이다</td>
+                        <td>말 그대로 그 사람의 특징에서 애교를 빼면 남는게 없을 정도로 귀여움이 배어있는 사람을 지칭한다</td>
+                    </tr>
+                    <tr>
+                        <td>갈비</td>
+                        <td>갈수록 비호감</td>
+                        <td>반대되는 뜻으로 볼수록 매력있다는 뜻의 '볼매'가 있다</td>
+                    </tr>
+                    <tr>
+                        <td>스불재</td>
+                        <td>스스로 불러온 재앙</td>
+                        <td>자신의 욕심이나 선택으로 인해 피해를 받거나, 좋지 않은 결과를 가져왔을 때 사용한다</td>
+                    </tr>
+                    <tr>
+                        <td>알잘딱깔센</td>
+                        <td>알아서 잘 딱 깔끔하게 센스있게의 줄임말이다</td>
+                        <td>유명 스트리머 우왁굳이 방송에서 사용하며 큰 호응을 얻었다</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 
 </html>
