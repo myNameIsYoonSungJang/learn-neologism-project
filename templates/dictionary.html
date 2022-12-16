@@ -11,6 +11,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Jua&display=swap" rel="stylesheet">
     <style>
+        #home {
+            background-image: url("https://cdn-icons-png.flaticon.com/128/4436/4436584.png");
+            background-size: cover;
+            height: 33px;
+            width: 33px;
+        }
+        #home:hover{
+            opacity: 0.7;
+        }
+
         .menubar {
             display: flex;
             font-size: 20px;
@@ -161,7 +171,7 @@
 <body>
     <!-- nav -->
     <nav class="menubar">
-        <div><a href="/" id="homepage">home</a></div>
+        <a href="/" id="homepage"><div id="home"></div></a>
         <div id="menuDiv">
             <div><a href="/introduce">페이지 소개</a></div>
             <div><a href="/survey">신조어 수준 테스트</a></div>
